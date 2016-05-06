@@ -1,20 +1,5 @@
 <!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -39,8 +24,8 @@
     <link rel="shortcut icon" href="images/favicon.png">
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="icon.css">
     <link rel="stylesheet" href="material.min.css" />
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -53,24 +38,43 @@
       margin-bottom: 40px;
       z-index: 900;
     }
+	#header1{
+		
+		background: url('images/header.jpg') ;
+	}
+	#errorColor{
+		color: yellow;
+	}
+	.stretch{
+		width:100%;
+		height:100%;
+	}
+	.rightText{
+		text-align:right;
+	}
+	.mdl-textfield{
+		width:700px !important;
+	}
     </style>
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary" id="header1">
+	  <br/>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+		<img src="images/logo-2.png" style="margin:auto">
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Programmer's &amp; ETEC -  IHC</h3>
-        </div>
+		<br/>
+       
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
         <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active" id="home">Home</a>
           <a href="#features" class="mdl-layout__tab">Produtos</a>
           <a href="#features" class="mdl-layout__tab">Contato</a>
+		  <a href="#features" class="mdl-layout__tab">Distribuidores</a>
           <a href="#features" class="mdl-layout__tab" id="about-us">About-us</a>
-          <a href="#features" class="mdl-layout__tab">FAQ</a>
+          
           <button onclick="Start()" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
             <i class="material-icons" role="presentation">add</i>
             <span class="visuallyhidden">Add</span>
@@ -81,54 +85,47 @@
         <div class="mdl-layout__tab-panel is-active" id="overview">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-              <i class="material-icons">play_circle_filled</i>
+             <img src="images/newProduct.png" class="stretch">
             </header>
             <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
               <div class="mdl-card__supporting-text">
-                <h4>Features</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+                <h4>Novo produto</h4>
+				 Lorem ipsum suspendisse sit nulla suscipit ullamcorper varius amet, risus sed dictum vel hendrerit cras quisque ante, conubia litora ligula taciti risus ultricies quam. netus vivamus fringilla ligula auctor curabitur fames aptent imperdiet donec, phasellus torquent eros conubia id hendrerit ultricies sagittis eleifend, ut molestie sagittis nullam taciti rutrum eu elit. dictumst ut cubilia condimentum pulvinar mauris bibendum, eros magna curabitur interdum amet hac, luctus vitae mollis metus malesuada. libero non iaculis congue donec magna in pretium nec aliquam ullamcorper amet hendrerit libero erat, neque curabitur tortor nullam eu ipsum a at erat amet proin lobortis. 
               </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
+              <div class="mdl-card__actions" id="wrong-button">
+                <a href="#" class="mdl-button">Clique neste botão para conhecer o nosso mais novo produto</a>
               </div>
             </div>
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
               <i class="material-icons">more_vert</i>
             </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1" id="wrong-menu-right">
+              <li class="mdl-menu__item rightText">Lorem</li>
+              <li class="mdl-menu__item rightText" disabled>Ipsum</li>
+              <li class="mdl-menu__item rightText">Dolor</li>
             </ul>
           </section>
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
+                <h4 class="mdl-cell mdl-cell--12-col">Mais um Case de Sucesso</h4>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" id="office">
+                   <img src="images/office.png" class="stretch" alt="" />
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+                  <h5>Migração para Office 365</h5>
+                  Com mais de 14 anos de atuando em desenvolvimento, a empresa desenvolve mais uma solução para revolucionar o mercado de TI
                 </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+         
+              
+               
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone" id="wrong-place">
+                  <h5>Empresa Multinacional X declara estado de Falencia apos 30 anos de Mercado de Trabalho</h5>
+                  A lei de recuperação de empresas e falência está mais preocupada com a recuperação das médias e grandes empresas, criando para essas um procedimento ordinário e submetendo as empresas de pequeno porte e microempresas a um procedimento especial, semelhante à atual concordata preventiva, dilatando o máximo do prazo atual de pagamento dos credores quirografários de 24 para 36 meses, podendo ser prorrogado por mais um ano. <a href="#">Clique aqui e confira</a>.
                 </div>
               </div>
               <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
+                <a href="#" class="mdl-button">Mais detalhes sobre o Case</a>
               </div>
             </div>
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
@@ -143,12 +140,12 @@
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text">
-                <h4>Technology</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+                <h4>Tecnologia</h4>
+				<div id="warning-collor">
+                <p>Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu.</p> <u id="errorColor">Nostrud in laboris labore nisi</u> amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
+				</div>
               </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
+             
             </div>
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
               <i class="material-icons">more_vert</i>
@@ -161,73 +158,106 @@
           </section>
           <section class="section--footer mdl-color--white mdl-grid">
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+             <img src="images/olurim.png" class="stretch">
             </div>
             <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
+              <h5>Murilo Manzoli</h5>
+              Desenvolvedor .Net, especializado na arte de fazer coisas funcionarem e dar vida a alguns códigos. Mestre em SharpDeveloper há 5 meses; Conquistado VS há 1 mês.
             </div>
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
+              <img src="images/botelho.png" class="stretch">
             </div>
             <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
+              <h5>Felipe Rodrigues</h5>
+              Desenvolvedor .Net, especialista de converter café em código há algum tempo. Mestre em achar bugs... e ter de corrigi-los há 1 ano e 3 meses.
             </div>
           </section>
         </div>
         <div class="mdl-layout__tab-panel" id="features">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>Features</h4>
-              Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-              <ul class="toc">
-                <h4>Contents</h4>
-                <a href="#lorem1">Lorem ipsum</a>
-                <a href="#lorem2">Lorem ipsum</a>
-                <a href="#lorem3">Lorem ipsum</a>
-                <a href="#lorem4">Lorem ipsum</a>
-                <a href="#lorem5">Lorem ipsum</a>
-              </ul>
+		          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Deixe seu Comentário</h4>
+				<p>Esta é uma área dedicada a saber como estamos no ponto de vista de nossos clientes e colaboradores... </p>
+				
+				 <button id="show-dialog" type="button" class="mdl-button">Deixe seu feedback aqui</button>
+				  <dialog class="mdl-dialog" style="width:750px">
+					<h4 class="mdl-dialog__title">Fale conosco</h4>
+					<div class="mdl-dialog__content">
+					  <div style="width: 200px;float: left; cursor:pointer" id="showError"><p>
+						Campos Opcionais
+					  </p>
+					  </div>
+					  <div id="what" style="width: 500px; float: right; display:none" >
+					  <img id ="imagewhat"src="images/what.png" style="width: 100px; height: 150px;">
+					  </div>
+					  <div class="mdl-tooltip" for="imagewhat">
+							Opcional... FAIL <strong>¬¬'</strong>
+					  </div>
+					  <form action="#">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="sample3">
+						<label class="mdl-textfield__label" for="sample3">Nome (Obrigatório)</label>
+					  </div>
+					  <br/>
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="sample3">
+						<label class="mdl-textfield__label" for="sample3">Email (Obrigatório)</label>
+					  </div>
+					  <br/>
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" id="sample3">
+						<label class="mdl-textfield__label" for="sample3">Assunto</label>
+					  </div>
+					<br/>
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="desordenado">
+						<input class="mdl-textfield__input" type="text" id="sample3">
+						<label class="mdl-textfield__label" for="sample3">Sobrenome</label>
+						
+					  </div>
+					  <div style="display:none; color:red;" id="input-sobrenome">* Fora da Ordem. Deveria vir após o campo 'Nome'</div>
 
-              <h5 id="lorem1">Lorem ipsum dolor sit amet</h5>
-              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
-              <ul>
-                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
-                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
-                <li>Lorem labore proident officia excepteur do.</li>
-              </ul>
-
-              <p>
-                Sit qui est voluptate proident minim cillum in aliquip cupidatat labore pariatur id tempor id. Proident occaecat occaecat sint mollit tempor duis dolor cillum anim. Dolore sunt ea mollit fugiat in aliqua consequat nostrud aliqua ut irure in dolore. Proident aliqua culpa sint sint exercitation. Non proident occaecat reprehenderit veniam et proident dolor id culpa ea tempor do dolor. Nulla adipisicing qui fugiat id dolor. Nostrud magna voluptate irure veniam veniam labore ipsum deserunt adipisicing laboris amet eu irure. Sunt dolore nisi velit sit id. Nostrud voluptate labore proident cupidatat enim amet Lorem officia magna excepteur occaecat eu qui. Exercitation culpa deserunt non et tempor et non.
-              </p>
-              <p>
-                Do dolor eiusmod eu mollit dolore nostrud deserunt cillum irure esse sint irure fugiat exercitation. Magna sit voluptate id in tempor elit veniam enim cupidatat ea labore elit. Aliqua pariatur eu nulla labore magna dolore mollit occaecat sint commodo culpa. Eu non minim duis pariatur Lorem quis exercitation. Sunt qui ex incididunt sit anim incididunt sit elit ad officia id.
-              </p>
-              <p id="lorem2">
-                Tempor voluptate ex consequat fugiat aliqua. Do sit et reprehenderit culpa deserunt culpa. Excepteur quis minim mollit irure nulla excepteur enim quis in laborum. Aliqua elit voluptate ad deserunt nulla reprehenderit adipisicing sint. Est in eiusmod exercitation esse commodo. Ea reprehenderit exercitation veniam adipisicing minim nostrud. Veniam dolore ex ea occaecat non enim minim id ut aliqua adipisicing ad. Occaecat excepteur aliqua tempor cupidatat aute dolore deserunt ipsum qui incididunt aliqua occaecat sit quis. Culpa sint aliqua aliqua reprehenderit veniam irure fugiat ea ad.
-              </p>
-              <p>
-                Eu minim fugiat laborum irure veniam Lorem aliqua enim. Aliqua veniam incididunt consequat irure consequat tempor do nisi deserunt. Elit dolore ad quis consectetur sint laborum anim magna do nostrud amet. Ea nulla sit consequat quis qui irure dolor. Sint deserunt excepteur consectetur magna irure. Dolor tempor exercitation dolore pariatur incididunt ut laboris fugiat ipsum sunt veniam aute sunt labore. Non dolore sit nostrud eu ad excepteur cillum eu ex Lorem duis.
-              </p>
-              <p>
-                Id occaecat velit non ipsum occaecat aliqua quis ut. Eiusmod est magna non esse est ex incididunt aute ullamco. Cillum excepteur sint ipsum qui quis velit incididunt amet. Qui deserunt anim enim laborum cillum reprehenderit duis mollit amet ad officia enim. Minim sint et quis aliqua aliqua do minim officia dolor deserunt ipsum laboris. Nulla nisi voluptate consectetur est voluptate et amet. Occaecat ut quis adipisicing ad enim. Magna est magna sit duis proident veniam reprehenderit fugiat reprehenderit enim velit ex. Ullamco laboris culpa irure aliquip ad Lorem consequat veniam ad ipsum eu. Ipsum culpa dolore sunt officia laborum quis.
-              </p>
-
-              <h5 id="lorem3">Lorem ipsum dolor sit amet</h5>
-
-              <p id="lorem4">
-                Eiusmod nulla aliquip ipsum reprehenderit nostrud non excepteur mollit amet esse est est dolor. Dolore quis pariatur sit consectetur veniam esse ullamco duis Lorem qui enim ut veniam. Officia deserunt minim duis laborum dolor in velit pariatur commodo ullamco eu. Aute adipisicing ad duis labore laboris do mollit dolor cillum sunt aliqua ullamco. Esse tempor quis cillum consequat reprehenderit. Adipisicing proident anim eu sint elit aliqua anim dolore cupidatat fugiat aliquip qui.
-              </p>
-              <p id="lorem5">
-                Nisi eiusmod esse cupidatat excepteur exercitation ipsum reprehenderit nostrud deserunt aliqua ullamco. Anim est irure commodo eiusmod pariatur officia. Est dolor ipsum excepteur magna aliqua ad veniam irure qui occaecat eiusmod aute fugiat commodo. Quis mollit incididunt amet sit minim velit eu fugiat voluptate excepteur. Sit minim id pariatur ex cupidatat cupidatat nostrud nostrud ipsum.
-              </p>
-              <p>
-                Enim ea officia excepteur ad veniam id reprehenderit eiusmod esse mollit consequat. Esse non aute ullamco Lorem aliqua qui dolore irure eiusmod aute aliqua proident labore aliqua. Ipsum voluptate voluptate exercitation laborum deserunt nulla elit aliquip et minim ex veniam. Duis cupidatat aute sunt officia mollit dolor ad elit ad aute labore nostrud duis pariatur. In est sint voluptate consectetur velit ea non labore. Ut duis ea aliqua consequat nulla laboris fugiat aute id culpa proident. Minim eiusmod laboris enim Lorem nisi excepteur mollit voluptate enim labore reprehenderit officia mollit.
-              </p>
-              <p>
-                Cupidatat labore nisi ut sunt voluptate quis sunt qui ad Lorem esse nisi. Ex esse velit ullamco incididunt occaecat dolore veniam tempor minim adipisicing amet. Consequat in exercitation est elit anim consequat cillum sint labore cillum. Aliquip mollit laboris ad labore anim.
-              </p>
+					</form>
+					  
+					  
+					  
+					</div>
+					<div class="mdl-dialog__actions">
+					  <button type="button" class="mdl-button">Enviar</button>
+					  <button type="button" class="mdl-button close">Cancelar</button>
+					</div>
+				  </dialog>
+				  <script>
+					var dialog = document.querySelector('dialog');
+					var showDialogButton = document.querySelector('#show-dialog');
+					if (! dialog.showModal) {
+					  dialogPolyfill.registerDialog(dialog);
+					}
+					showDialogButton.addEventListener('click', function() {
+					  dialog.showModal();
+					});
+					dialog.querySelector('.close').addEventListener('click', function() {
+					  dialog.close();
+					});
+				  </script>
+              </div>
+             
+            </div>
+          </section>       
+		    <section class="section--footer mdl-color--white mdl-grid" style="margin-bottom:0">
+            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+             <img src="images/olurim.png" class="stretch">
+            </div>
+            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Murilo Manzoli</h5>
+              Desenvolvedor .Net, especializado na arte de fazer coisas funcionarem e dar vida a alguns códigos. Mestre em SharpDeveloper há 5 meses; Conquistado VS há 1 mês.
+            </div>
+            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+              <img src="images/botelho.png" class="stretch">
+            </div>
+            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Felipe Rodrigues</h5>
+              Desenvolvedor .Net, especialista de converter café em código há algum tempo. Mestre em achar bugs... e ter de corrigi-los há 1 ano e 3 meses.
             </div>
           </section>
         </div>
@@ -273,16 +303,7 @@
               </ul>
             </div>
           </div>
-          <div class="mdl-mega-footer--bottom-section">
-            <div class="mdl-logo">
-              More Information
-            </div>
-            <ul class="mdl-mega-footer--link-list">
-              <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Privacy and Terms</a></li>
-            </ul>
-          </div>
+
         </footer>
       </main>
     </div>
